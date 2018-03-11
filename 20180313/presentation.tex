@@ -1,0 +1,314 @@
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\hypersetup{
+            pdftitle={Meeting 1},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+\usetheme{Madrid}
+\setbeamertemplate{footline}{} % disable footer
+%\usecolortheme{whale}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\setbeamersize{text margin left=15pt}
+
+\title{Meeting 1}
+\subtitle{ETTI-ML Meetings}
+\date{13.03.2018}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Topics}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Location / resources
+\item
+  Review: ``Deep Learning for Computer Vision''
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Starter Bundle
+  \item
+    Practitioner Bundle
+  \end{itemize}
+\item
+  GPU on the cloud: floydhub.com
+\item
+  Review: ``Deep Image Prior''
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Location / resources}
+
+\begin{itemize}
+\tightlist
+\item
+  Let's hold common stuff (presentations, paper etc.) in a common place
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Github: https://github.com/ETTI-ML
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Organization: ETTI-ML
+  \item
+    Made a repository for meetings: https://github.com/ETTI-ML/meetings
+  \item
+    Only public repositories for free accounts
+  \item
+    Alternatives for private repos: gitlab.com, bitbucket.com
+  \end{itemize}
+\item
+  Shared paper database: Zotero (zotero.com)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Keep a common database of papers, review notes, links etc.
+  \item
+    A little cumbersome
+  \item
+    Alternatives: Mendeley, EndNote, Paperpile etc
+  \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Review: ``Deep Learning for Computer Vision''}
+
+\begin{itemize}
+\item
+  Review: ``Deep Learning for Computer Vision, With Python'', Dr.~Adrian
+  Rosebrock, 1st Ed.
+\item
+  Book + code examples + Virtual Machine
+\item
+  Comes in three flavours:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Starter Bundle
+  \item
+    Practitioner Bundle
+  \item
+    ImageNet Bundle (not available)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Review: ``Deep Learning for Computer Vision''}
+
+\begin{itemize}
+\item
+  Topic: Deep CNNs for image classification
+\item
+  Style:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    little theory
+  \item
+    examples in Python, explained step by step
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Starter Bundle}
+
+\begin{itemize}
+\tightlist
+\item
+  Starter Bundle
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the easiest, contains the basics
+  \end{itemize}
+\item
+  Topics:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Basics
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Image classification basics
+    \item
+      Basic datasets
+    \item
+      Stochastic Gradient Descent
+    \end{itemize}
+  \item
+    Neural Network basic architectures
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Basic layer types
+    \item
+      Backprop
+    \item
+      CNN building blocks
+    \item
+      Example: recognizing handwritten digits (MNIST) with LeNet
+    \end{itemize}
+  \item
+    Some tips \& tricks:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      spotting underfiting / overfiting
+    \item
+      checkpointing
+    \item
+      visualize architectures
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Practitioner Bundle}
+
+\begin{itemize}
+\tightlist
+\item
+  Practitioner Bundle
+
+  \begin{itemize}
+  \tightlist
+  \item
+    More advanced tips \& tricks, but still easy from theoretic p.o.v.
+  \end{itemize}
+\item
+  Topics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Advanced (state-of-the-art) CNN architectures for image
+    classification: VGG, GoogLeNet, ResNet\\
+  \item
+    Adaptation: train / replace only top layers, keep pre-trained lower
+    layers
+  \item
+    Various alternatives to SGD (RMSprop etc)
+  \item
+    More handy tips \& tricks: data augmentation, preprocessing, work
+    with HDF5 files
+  \item
+    Works with larger datasets (Kaggle, subset of ImageNet)
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Side topics}
+
+\begin{itemize}
+\tightlist
+\item
+  OpenCV is really for image processing
+\item
+  This guy has a similar book for OpenCV: ``Practical Python and OpenCV
+  + Case Studies''
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{GPU on the cloud: floydhub.com}
+
+\begin{itemize}
+\tightlist
+\item
+  floydhub.com
+\item
+  transfer code automatically to their site \& run
+\item
+  works with Jupyter notebooks (maybe also plain .py files)
+\item
+  can be run / controlled from Linux command line (nice)
+\item
+  affordable: Standard GPU, Tesla K80 with 12GB Memory, preemptible: 7\$
+  / 10h ()
+\end{itemize}
+
+\end{frame}
+
+\end{document}
